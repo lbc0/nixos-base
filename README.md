@@ -40,6 +40,7 @@ reboot
 # Dotfiles
 ```
 mkdir ~/nixos-dotfiles
+cp /etc/nixos/hardware-configuration.nix ~/nix-dotfile/ # Copy the hardware configurations
 git clone https://github.com/lbc0/nixos-lbc.git # Clone the other repo!
 # verify the ownership and permissions: sudo chown -R lbc:users ~/nixos-dotfiles && 
 ```
