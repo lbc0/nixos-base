@@ -26,6 +26,7 @@ cd /mnt/etc/nixos/
 ```
 ## Clone the rest from this repo:
 ```git clone https://github.com/lbc0/nixos-base.git```
+### Verrify the version!!!
 
 # Install NixOS:
 ```
