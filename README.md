@@ -39,10 +39,12 @@ reboot
 ```
 # Dotfiles
 ```
-ssh-keygen -t ed25519 -C "your_email@example.com"
+git config user.name "lbc"
+git config user.email "lbc@example.com"
+ssh-keygen -t ed25519 -C "lbc@example.com"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub # Copy the public key and add it to your Github
-git clone https://github.com/lbc0/nixos-lbc.git ~/ # Clone the other repo!
+git clone git@github.com:lbc0/nixos-lbc.git ~/ # Clone the other repo!
 cp /etc/nixos/hardware-configuration.nix ~/nixos-lbc/ # Copy the hardware configurations
 
 # verify the ownership: sudo chown -R lbc:users ~/nixos-lbc 
