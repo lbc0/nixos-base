@@ -30,12 +30,12 @@
     ];
   };
 
-  programs.firefox.enable = true;
   programs.niri.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
     wget
+    brave
     alacritty
     fuzzel
     git
