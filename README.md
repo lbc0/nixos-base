@@ -39,14 +39,17 @@ reboot
 ```
 # Dotfiles
 ```
-mkdir ~/nixos-dotfiles
-cp /etc/nixos/hardware-configuration.nix ~/nix-dotfile/ # Copy the hardware configurations
-git clone https://github.com/lbc0/nixos-lbc.git # Clone the other repo!
-# verify the ownership and permissions: sudo chown -R lbc:users ~/nixos-dotfiles && 
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub # Copy the public key and add it to your Github
+git clone https://github.com/lbc0/nixos-lbc.git ~/ # Clone the other repo!
+cp /etc/nixos/hardware-configuration.nix ~/nixos-lbc/ # Copy the hardware configurations
+
+# verify the ownership: sudo chown -R lbc:users ~/nixos-lbc 
 ```
 
 # Rebuild
-```sudo nixos-rebuild switch --flake ~/nixos-dotfiles#nixos-lbc```
+```sudo nixos-rebuild switch --flake ~/nixos-lbc#lbc```
 
 
 
