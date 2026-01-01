@@ -30,7 +30,7 @@ cd /mnt/etc/nixos/
 
 # Install NixOS:
 ```
-nixos-install --flake /mnt/etc/nixos#nixos-lbc
+nixos-install --flake /mnt/etc/nixos#lbc
 # Enter the root password
 nixos-enter --root /mnt -c 'passwd lbc' #add password for the user
 reboot
